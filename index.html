@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro Documentos</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <script src="https://www.gstatic.com/firebasejs/8.2.3/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.3/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.3/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.3/firebase-storage.js"></script>
+</head>
+
+<body>
+    <main>
+        <div class="imagenes_cabecera_fila">
+            <section class="img img1">
+                <img src="img/logopachas.png" alt="">
+            </section>
+            <section class="img img2">
+                <img src="img/ministerio_de_comunicaciones.png" alt="">
+            </section>
+            <section class="img img3">
+                <img src="img/leonelhack-.png" alt="">
+            </section>
+        </div>
+            <h1>Registra Documentos de la Municpalidad Distrital de Pachas</h1>
+            <form>
+                <fieldset>
+                    <legend>Formulario de registro</legend>
+                    <div>
+                        <label for="doc_Nombre">nombre del documento</label>
+                        <input type="text" name="doc_Nombre" id="doc_Nombre" placeholder="nombre del documento">
+                    </div>
+                    <div>
+                        <label for="doc_Expediente">número de expediente</label>
+                        <input type="text" name="doc_Expediente" id="doc_Expediente" placeholder="número de expediente">
+                    </div>
+                    <div>
+                        <label for="doc_Ubicacion">ubicación del documento</label>
+                        <input type="text" name="doc_Ubicacion" id="doc_Ubicacion"
+                            placeholder="ubicación del documento">
+                    </div>
+                    <div>
+                        <button class="send">enviar</button>
+                    </div>
+                </fieldset>
+            </form>
+        </section>
+        <section>
+            <h2>Asistente de busqueda</h2>
+            <div class="search">
+                <input type="text" name="documentos_busqueda" id="documentos_busqueda"
+                    placeholder="Digita el expediente del documento">
+                <button class="buscar_button">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24"
+                        height="24" viewBox="0 0 24 24" stroke-width="3" stroke="#f5f5f5" fill="none"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                        <path d="M10 10m-7 0a7 7 0 1 0 14 0a7 7 0 1 0 -14 0" />
+                        <path d="M21 21l-6 -6" />
+                    </svg>
+                </button>
+            </div>
+            <div class="campos">
+                <span class="nombre_doc"></span>
+                <span class="expediente_doc"></span>
+                <span class="ubicacion_doc"></span>
+            </div>
+        </section>
+    </main>
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js?version=1.1"></script>
+<script type="module" src="./assets/js/app.js"></script>
+
+</html>
